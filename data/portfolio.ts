@@ -384,7 +384,7 @@ export const portfolioData = {
       {
         company: "Hunabsys R&D",
         title: "Software Engineer",
-        date: "May 2017 - Sep 2019",
+        date: "May 2018 - Sep 2019",
         impact: [
           "Developed and supported multiple web applications across diverse stacks, including Ruby on Rails, .NET, React, and WordPress.",
           "Built an attendance tracking system integrating biometric fingerprint hardware.",
@@ -410,7 +410,7 @@ export const portfolioData = {
       {
         title: "Intensive Full Stack Engineering Bootcamp",
         institution: "Caffeine Labs (Tomato Valley)",
-        period: "2016 - 2017",
+        period: "2017 - 2018",
         description:
           "An afternoon workshop of three hours per day teaching Front End and Back End technologies.",
       },
@@ -565,7 +565,7 @@ export const portfolioData = {
       {
         company: "Hunabsys R&D",
         title: "Ingeniero de Software",
-        date: "May 2017 - Sep 2019",
+        date: "May 2018 - Sep 2019",
         impact: [
           "Desarrollé y brindé soporte a múltiples aplicaciones web con diversos stacks, incluidos Ruby on Rails, .NET, React y WordPress.",
           "Construí un sistema de control de asistencia que integraba hardware biométrico de huellas dactilares.",
@@ -592,7 +592,7 @@ export const portfolioData = {
       {
         title: "Intensive Full Stack Engineering Bootcamp",
         institution: "Caffeine Labs (Tomato Valley)",
-        period: "2016 - 2017",
+        period: "2017 - 2018",
         description:
           "Taller vespertino de tres horas diarias dedicado a la enseñanza de tecnologías Front End y Back End.",
       },
