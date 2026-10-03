@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useLanguage } from "@/components/LanguageContext";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import ProjectGallery from "@/components/ProjectGallery";
 import { portfolioData } from "@/data/portfolio";
 
 export default function ProjectsGrid() {
@@ -43,7 +44,7 @@ export default function ProjectsGrid() {
                   </Badge>
                 ))}
               </div>
-              <div className="mt-6 flex items-center">
+              <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
                 <a
                   href={project.liveUrl}
                   target="_blank"
@@ -58,6 +59,7 @@ export default function ProjectsGrid() {
                   <ExternalLink size={16} aria-hidden="true" />
                   {language === "en" ? "Visit Project" : "Visitar Proyecto"}
                 </a>
+                <ProjectGallery images={project.gallery} title={project.title} />
               </div>
             </CardContent>
           </Card>

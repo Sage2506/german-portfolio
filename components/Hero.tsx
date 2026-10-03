@@ -49,7 +49,7 @@ export default function Hero() {
                 ? "Download CV (opens in a new tab)"
                 : "Descargar CV (abre en una pestaña nueva)"
             }
-            className="inline-flex min-h-11 items-center gap-2 rounded-md bg-primary px-6 py-2 font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2"
+            className="inline-flex min-h-11 items-center gap-2 rounded-md bg-primary px-6 py-2 font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           >
             <Download size={18} aria-hidden="true" />
             {language === "en" ? "Download CV" : "Descargar CV"}
@@ -58,7 +58,11 @@ export default function Hero() {
       </div>
       <div className="relative w-full aspect-square md:aspect-[4/5] md:col-span-2 overflow-hidden rounded-2xl border border-border">
         <Image
-          alt="Germán Salazar"
+          alt={
+            language === "en"
+              ? "Portrait of Germán Salazar"
+              : "Retrato de Germán Salazar"
+          }
           className="object-cover"
           fill
           preload

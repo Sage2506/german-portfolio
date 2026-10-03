@@ -1,10 +1,12 @@
 "use client";
 
-import { Database, ExternalLink, Github } from "lucide-react";
+import { Database, ExternalLink } from "lucide-react";
 import Image from "next/image";
+import { GithubIcon } from "@/components/BrandIcons";
 import { useLanguage } from "@/components/LanguageContext";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import ProjectGallery from "@/components/ProjectGallery";
 import { portfolioData } from "@/data/portfolio";
 
 export default function FeaturedProject() {
@@ -59,7 +61,7 @@ export default function FeaturedProject() {
                 }
                 className="inline-flex min-h-11 items-center gap-2 rounded px-2 text-sm font-medium hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2"
               >
-                <Github size={18} aria-hidden="true" />
+                <GithubIcon className="size-[18px]" />
                 Frontend
               </a>
               <a
@@ -90,6 +92,7 @@ export default function FeaturedProject() {
                 <ExternalLink size={18} aria-hidden="true" />
                 {language === "en" ? "Live Site" : "Visitar Sitio"}
               </a>
+              <ProjectGallery images={project.gallery} title={project.title} />
             </div>
           </CardContent>
         </div>
