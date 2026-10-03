@@ -56,7 +56,7 @@ export default function Hero() {
           </a>
         </div>
       </div>
-      <div className="relative w-full aspect-square md:aspect-[4/5] md:col-span-2 overflow-hidden rounded-2xl border border-border">
+      <div className="relative w-full aspect-square md:aspect-4/5 md:col-span-2 overflow-hidden rounded-2xl border border-border">
         <Image
           alt={
             language === "en"
@@ -65,7 +65,8 @@ export default function Hero() {
           }
           className="object-cover"
           fill
-          preload
+          priority
+          fetchPriority="high"
           sizes="(max-width: 768px) 100vw, 40vw"
           src="/German_Salazar_Profile_Photo.jpg"
         />
