@@ -6,16 +6,17 @@ import { useLanguage } from "@/components/LanguageContext";
 import { Badge } from "@/components/ui/badge";
 import { portfolioData } from "@/data/portfolio";
 
-export default function Hero() {
+export default function Hero({ id }: { id?: string }) {
   const { language } = useLanguage();
   const { name, title, bio } = portfolioData[language].hero;
   const { cvUrl } = portfolioData[language].contact;
 
   return (
     <section
+      id={id}
       lang={language}
       aria-labelledby="hero-name"
-      className="mt-10 grid grid-cols-1 md:grid-cols-5 gap-12 items-center"
+      className="mt-10 grid grid-cols-1 md:grid-cols-5 gap-12 items-center bg-white dark:bg-gray-800 p-4 md:p-0 rounded-xl md:rounded-none"
     >
       <div className="md:col-span-3 flex flex-col items-start">
         <Badge
@@ -74,3 +75,4 @@ export default function Hero() {
     </section>
   );
 }
+

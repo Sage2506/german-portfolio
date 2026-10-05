@@ -16,7 +16,7 @@ export default function FeaturedProject() {
   return (
     <section lang={language} aria-labelledby="adagio-title">
       <Card className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden border-border py-0 shadow-none">
-        <div className="relative w-full h-72 lg:h-full min-h-[320px] overflow-hidden rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none border-b lg:border-b-0 lg:border-r border-border">
+        <div className="relative w-full h-72 lg:h-full min-h-80 overflow-hidden rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none border-b lg:border-b-0 lg:border-r border-border">
           <Image
             alt={project.title}
             className="object-cover"
@@ -61,7 +61,7 @@ export default function FeaturedProject() {
                 }
                 className="inline-flex min-h-11 items-center gap-2 rounded px-2 text-sm font-medium hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2"
               >
-                <GithubIcon className="size-[18px]" />
+                <GithubIcon className="size-4.5" />
                 Frontend
               </a>
               <a

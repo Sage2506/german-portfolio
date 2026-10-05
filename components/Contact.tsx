@@ -18,7 +18,11 @@ const whatsappLinkClassName =
 const professionalLinkClassName =
   "group flex min-h-16 w-full items-center justify-between rounded-xl bg-neutral-100 p-4 transition-colors hover:bg-neutral-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:bg-neutral-900 dark:hover:bg-neutral-800";
 
-export default function Contact() {
+interface ContactProps {
+  id?: string;
+}
+
+export default function Contact({ id }: ContactProps) {
   const { language } = useLanguage();
   const { contact, socials } = portfolioData[language];
   const phoneHref = `tel:${contact.phone.replaceAll(" ", "")}`;
@@ -27,7 +31,7 @@ export default function Contact() {
     language === "en" ? "(opens in a new tab)" : "(abre en una pestaña nueva)";
 
   return (
-    <section lang={language} aria-labelledby="contact-title">
+    <section lang={language} aria-labelledby="contact-title" id={id}>
       <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-24 mt-32 mb-12">
         <div>
           <h2
@@ -63,7 +67,7 @@ export default function Contact() {
               }
               className={whatsappLinkClassName}
             >
-              <WhatsAppIcon className="size-4.5" />
+              <WhatsAppIcon className="size-4.5 text-white" />
               WhatsApp
             </a>
           </div>
@@ -107,7 +111,7 @@ export default function Contact() {
             className={professionalLinkClassName}
           >
             <span className="flex items-center gap-3 font-medium">
-              <LinkedinIcon className="size-5" />
+              <LinkedinIcon className="size-5 text-primary" />
               {language === "en" ? "LinkedIn Profile" : "Perfil de LinkedIn"}
             </span>
             <ArrowRight
@@ -124,7 +128,7 @@ export default function Contact() {
             className={professionalLinkClassName}
           >
             <span className="flex items-center gap-3 font-medium">
-              <GithubIcon className="size-5" />
+              <GithubIcon className="size-5 text-primary" />
               {language === "en" ? "GitHub Profile" : "Perfil de GitHub"}
             </span>
             <ArrowRight

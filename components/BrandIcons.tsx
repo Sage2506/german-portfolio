@@ -1,7 +1,5 @@
-import type { SVGProps } from "react";
-
+import { SVGProps } from "react";
 type BrandIconProps = SVGProps<SVGSVGElement>;
-
 export function GithubIcon(props: BrandIconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
