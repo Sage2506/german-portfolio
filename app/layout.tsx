@@ -54,7 +54,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           enableSystem
         >
           <LanguageProvider>
-            <main className="max-w-3xl mx-auto px-6 py-12 antialiased">
+            <main className="max-w-6xl mx-auto px-6 py-12 antialiased">
               <Navbar />
               {children}
             </main>

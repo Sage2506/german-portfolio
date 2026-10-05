@@ -11,7 +11,7 @@ const ProjectsGrid = dynamic(() => import('@/components/ProjectsGrid'));
 const Skills = dynamic(() => import('@/components/Skills'));
 export default function Home() {
   return (
-    <div>
+    <div className="pt-24">
       <Hero id="hero" />
       <div className="mt-12" id="metrics">
         <Metrics />
@@ -22,20 +22,21 @@ export default function Home() {
       <div className="mt-20" id="skills">
         <Skills />
       </div>
-      <div className="mt-16" id="featured-project">
-        <FeaturedProject />
-      </div>
-      <div className="mt-24" id="projects-grid">
-        <ProjectsGrid />
+      <div className="mt-16" id="projects">
+        <div id="featured-project">
+          <FeaturedProject />
+        </div>
+        <div className="mt-24" id="projects-grid">
+          <ProjectsGrid />
+        </div>
       </div>
       <div className="mt-16" id="experience">
         <Experience />
-      </div>
-      <div className="mt-24" id="education">
-        <Education />
+        <div className="mt-24" id="education">
+          <Education />
+        </div>
       </div>
       <Contact id="contact" />
     </div>
   );
 }
-
